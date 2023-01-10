@@ -1,0 +1,22 @@
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[project]
+name = "pygame-helper-lib"
+version = "1.0.0"
+authors = [
+  { name="VL07" },
+]
+description = "A helper library for pygame"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/VL07/pygameHelperLib"
+"Bug Tracker" = "https://github.com/VL07/pygameHelperLib/issues"
