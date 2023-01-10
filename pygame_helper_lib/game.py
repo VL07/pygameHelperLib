@@ -92,14 +92,17 @@ class Game:
                 self.debugInfo.activeScene = self.sceneManager.currentScene.name \
                     if self.sceneManager.currentScene else "Default"
 
-            for event in pygame.event.get():
+            events = pygame.event.get()
+
+            for event in events:
                 if event.type == pygame.KEYDOWN and event.key == pygame.K_F1:
                     self.showDebugInfo = not self.showDebugInfo
+                    break
 
-            self.updateMain(pygame.event.get(), dt)
+            self.updateMain(events, dt)
 
-            self.sceneManager.update(pygame.event.get(), dt)
-            self.update(pygame.event.get(), dt)
+            self.sceneManager.update(events, dt)
+            self.update(events, dt)
 
             canvasSize = self.canvasSize if self.canvasSize else self.display.get_size()
             canvas = pygame.surface.Surface(canvasSize)
